@@ -89,8 +89,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     value: {
       user,
       isAuthenticated: !!user,
-      login: (credentials) => loginMutation.mutateAsync(credentials),
-      register: (data) => registerMutation.mutateAsync(data),
+      login: async (credentials) => { await loginMutation.mutateAsync(credentials); },
+      register: async (data) => { await registerMutation.mutateAsync(data); },
       logout,
       isLoggingIn: loginMutation.isPending,
       isRegistering: registerMutation.isPending,
