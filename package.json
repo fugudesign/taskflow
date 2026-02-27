@@ -6,7 +6,7 @@
   "scripts": {
     "test:all": "npm test --prefix server && npm test --prefix client",
     "dev:server": "npm run dev --prefix server",
-    "dev:client": "npm run dev --prefix client",
+    "dev:client": "npm run start --prefix client",
     "lint": "echo \"No global linter configured yet\""
   },
   "keywords": [],
